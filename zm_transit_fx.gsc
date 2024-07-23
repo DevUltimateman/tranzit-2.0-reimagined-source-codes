@@ -1,7 +1,7 @@
 //checked includes match cerberus output
-#include maps/mp/createart/zm_transit_art;
-#include maps/mp/createfx/zm_transit_fx;
-#include maps/mp/_utility;
+#include maps\mp\createart\zm_transit_art;
+#include maps\mp\createfx\zm_transit_fx;
+#include maps\mp_utility;
 
 //#namespace ultimateman_transit_gump_load_fx
 
@@ -9,8 +9,8 @@ main() //checked matches cerberus output
 {
 	precache_createfx_fx();
 	precache_scripted_fx();
-	maps/mp/createfx/zm_transit_fx::main();
-	maps/mp/createart/zm_transit_art::main();
+	maps\mp\createfx\zm_transit_fx::main();
+	maps\mp\createart\zm_transit_art::main();
 }
 
 precache_scripted_fx() //checked matches cerberus output
