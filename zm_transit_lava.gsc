@@ -1,8 +1,8 @@
-#include maps/mp/animscripts/zm_death;
-#include maps/mp/_visionset_mgr;
-#include maps/mp/zombies/_zm_utility;
-#include maps/mp/_utility;
-#include common_scripts/utility;
+#include maps\mp\animscripts\zm_death;
+#include maps\mp\_visionset_mgr;
+#include maps\mp\zombies\_zm_utility;
+#include maps\mp\_utility;
+#include common_scripts\utility;
 
 //#namespace zm_transit_lava;
 //#namespace ultimateman_zm_transit_lava_disable
