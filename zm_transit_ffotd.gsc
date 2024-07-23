@@ -1,9 +1,9 @@
-#include maps/mp/zm_transit;
-#include maps/mp/zombies/_zm_ffotd;
-#include maps/mp/zombies/_zm;
-#include maps/mp/zombies/_zm_utility;
-#include common_scripts/utility;
-#include maps/mp/_utility;
+#include maps\mp\zm_transit;
+#include maps\mp\zombies\_zm_ffotd;
+#include maps\mp\zombies\_zm;
+#include maps\mp\zombies\_zm_utility;
+#include common_scripts\utility;
+#include maps\mp\_utility;
 
 //#namespace zm_transit_ffotd;
 //#namespace ultimateman_transit_ffotd_unpatched
