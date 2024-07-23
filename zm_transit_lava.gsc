@@ -8,7 +8,20 @@
 //#namespace ultimateman_zm_transit_lava_disable
 
 
-object_touching_lava()
+//2024  update for the snow version
+main()
+{
+	replacefunc( maps\mp\zm_transit_lava::object_touching_lava, ::object_touching_replacer );
+	replacefunc( maps\mp\zm_transit_lava::lava_damage_think, ::lava_damage_think_replacer ); 
+}
+
+
+
+//everything else could be deleted.
+//cant be arsed to delete now and check that the script wont crash.
+//replacefuncs should work as intended and replace anything below here.
+
+object_touching_replacer()
 {
 	if( isdefined( level.lava ) )
 	{
@@ -66,7 +79,7 @@ lava_damage_init()
 }
 
 
-lava_damage_think()
+lava_damage_think_replacer()
 {
 	self._trap_type = "";
 	if( isdefined( self.script_noteworthy ) )
