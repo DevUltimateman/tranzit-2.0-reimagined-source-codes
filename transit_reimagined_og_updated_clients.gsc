@@ -3401,10 +3401,6 @@ diner23()
     setCustomModel((-7278.46, -7082.85, 4.88449), (0, -42.5119, 0), 0, "t5_foliage_tree_burnt03");
 }
 
-diner23()
-{
-    setCustomModel((-8929.05, -6904.74, 173.372), (0, -33.3769, 0), 0, "t5_foliage_tree_burnt03");
-}
 
 diner24()
 {
