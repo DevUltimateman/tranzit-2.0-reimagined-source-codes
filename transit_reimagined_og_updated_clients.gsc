@@ -469,9 +469,9 @@ electrictrap_decay( weapon )
 
 electrictrap_expired( weapon )
 {
-	maps/mp/zombies/_zm_equipment::equipment_disappear_fx( weapon.origin );
+	maps\mp\zombies\_zm_equipment::equipment_disappear_fx( weapon.origin );
 	self cleanupoldtrap();
-	self maps/mp/zombies/_zm_equipment::equipment_release( level.electrictrap_name );
+	self maps\mp\zombies\_zm_equipment::equipment_release( level.electrictrap_name );
 	self.electrictrap_health = undefined;
 }
 
@@ -481,7 +481,7 @@ cleanupoldtrap()
 	{
 		if ( isDefined( self.buildableelectrictrap.stub ) )
 		{
-			thread maps/mp/zombies/_zm_unitrigger::unregister_unitrigger( self.buildableelectrictrap.stub );
+			thread maps\mp\zombies\_zm_unitrigger::unregister_unitrigger( self.buildableelectrictrap.stub );
 			self.buildableelectrictrap.stub = undefined;
 		}
 		self.buildableelectrictrap delete();
