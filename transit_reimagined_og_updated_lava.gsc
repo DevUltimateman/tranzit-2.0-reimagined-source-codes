@@ -79,7 +79,7 @@ lava_damage_init()
 }
 
 
-lava_damage_think_replacer()
+lava_damage_think_replacer( ent )
 {
 	self._trap_type = "";
 	if( isdefined( self.script_noteworthy ) )
