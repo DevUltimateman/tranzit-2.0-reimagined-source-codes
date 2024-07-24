@@ -426,7 +426,7 @@ equipment_in_use()
 
 		if ( (IsDefined( level.turret_name) && weapname == level.turret_name ) || (IsDefined(level.electrictrap_name) && weapname == level.electrictrap_name )  )
 		{
-			weapon.local_power = maps/mp/zombies/_zm_power::add_local_power( weapon.origin, 16 );
+			weapon.local_power = maps\mp\zombies\_zm_power::add_local_power( weapon.origin, 16 );
 
 			if ( IsDefined(level.electrictrap_name) && weapname == level.electrictrap_name )
 			{
@@ -3400,6 +3400,7 @@ diner23()
 {
     setCustomModel((-7278.46, -7082.85, 4.88449), (0, -42.5119, 0), 0, "t5_foliage_tree_burnt03");
 }
+
 
 
 diner24()
