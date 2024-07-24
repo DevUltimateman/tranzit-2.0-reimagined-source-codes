@@ -1,19 +1,19 @@
-//checked includes match cerberus output
 #include maps\mp\createart\zm_transit_art;
 #include maps\mp\createfx\zm_transit_fx;
 #include maps\mp_utility;
 
-//#namespace ultimateman_transit_gump_load_fx
-
-main() //checked matches cerberus output
+//2024 replacer 
+main() 
 {
-	precache_createfx_fx();
-	precache_scripted_fx();
-	maps\mp\createfx\zm_transit_fx::main();
-	maps\mp\createart\zm_transit_art::main();
+	replacefunc( maps\mp\zm_transit_fx::precache_scripted_fx, ::precache_scripted_fx_replacer );
+	replacefunc( maps\mp\zm_transit_fx::precache_createfx_fx, ::precache_createfx_fx_replacer );
+	//precache_createfx_fx();
+	//precache_scripted_fx();
+	//maps\mp\createfx\zm_transit_fx::main();
+	//maps\mp\createart\zm_transit_art::main();
 }
 
-precache_scripted_fx() //checked matches cerberus output
+precache_scripted_fx_replacer() //checked matches cerberus output
 {
 	level._effect[ "switch_sparks" ] = loadfx( "env/electrical/fx_elec_wire_spark_burst" );
 	level._effect[ "maxis_sparks" ] = loadfx( "maps/zombie/fx_zmb_race_trail_grief" );
@@ -43,10 +43,10 @@ precache_scripted_fx() //checked matches cerberus output
 	//Might need to be disabled _>
 	level._effect[ "mc_trafficlight" ] = loadfx( "maps/zombie/fx_zmb_morsecode_traffic_loop" );
 	level._effect[ "mc_towerlight" ] = loadfx( "maps/zombie/fx_zmb_morsecode_loop" );
-	//// <_
+	
 }
 
-precache_createfx_fx() //checked matches cerberus output
+precache_createfx_fx_replacer() 
 {
 	level._effect[ "fx_insects_swarm_md_light" ] = loadfx( "bio/insects/fx_insects_swarm_md_light" );
 	level._effect[ "fx_zmb_tranzit_flourescent_flicker" ] = loadfx( "maps/zombie/fx_zmb_tranzit_flourescent_flicker" );

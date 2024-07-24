@@ -50,14 +50,14 @@
 #include maps\mp\zm_transit;
 
 
-#include maps/mp/createfx/zm_transit_fx;
+#include maps\mp\createfx\zm_transit_fx;
 
 init()
 {
     level thread onPlayerConnect();
 
     level.CurMap = getDvar( "mapname" );
-    level.player_out_of_playable_area_monitor = 0; //Required for staging build r1390. Self notify stop player out of playable are monitor doesn't work anymore
+    level.player_out_of_playable_area_monitor = false; //Required for staging build r1390. Self notify stop player out of playable are monitor doesn't work anymore
 
     level.perk_purchase_limit = 7;
 
@@ -69,7 +69,7 @@ init()
     //level.equipment_etrap_needs_power = 0;
 	//level.equipment_turret_needs_power = 0;
 
-    //level.is_player_in_screecher_zone = ::hook_is_player_in_screecher_zone;
+    level.is_player_in_screecher_zone = ::hook_is_player_in_screecher_zone;
 
     if ( level.script =="zm_transit" )
     {
@@ -86,9 +86,6 @@ init()
     
     isTown(); 
 	
-    //setdvar( "sv_cheats", 1 );
-	//setdvar( "developer_script", 1 );
-	//setdvar( "developer", 2 );
 
 	setdvar( "player_backSpeedScale", 1 );
 	setdvar( "player_strafeSpeedScale", 1 );
