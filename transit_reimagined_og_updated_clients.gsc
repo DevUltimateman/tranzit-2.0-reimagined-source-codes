@@ -1105,7 +1105,7 @@ SpawnModel()
 }
 solo_tombstone_removal() 
 {
-	notify( "tombstone_on" );
+	level notify( "tombstone_on" );
 }
 
 turn_tombstone_on() 
