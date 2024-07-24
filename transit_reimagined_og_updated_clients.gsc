@@ -413,7 +413,7 @@ after_quickie_do_these()
 
 remove_eTrap_kill_limit() 
 {
-	level.etrap_damage = maps/mp/zombies/_zm::ai_zombie_health( 255 );
+	level.etrap_damage = maps\mp\zombies\_zm::ai_zombie_health( 255 );
 }
 
 equipment_in_use()
